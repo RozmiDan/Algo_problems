@@ -14,7 +14,7 @@ bool palinrom(int x)
     {
         //saving value x to compare in the end
         int origin_x = x;
-        int palindrome = 0;
+        long palindrome = 0;
 
         while(x != 0)
         {
@@ -31,6 +31,5 @@ bool palinrom(int x)
 int main()
 {
     cout << palinrom(4340);
-//    cout << "Hello World!" << endl;
     return 0;
 }
