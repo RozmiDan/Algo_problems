@@ -1,37 +1,5 @@
 #include <iostream>
 
-//int main()
-//{
-//    int n, x, y;
-//    std::cin >> n >> x >> y;
-
-//    double l_b = 0;
-//    double r_b = 20e14;
-//    long long result = 0;
-
-//    while (l_b <= r_b)
-//    {
-//        long long m_b = (long long)(l_b + r_b) / 2;
-//        long long cur_n = (long long)((m_b/x) + (r_b/y));
-//        if(cur_n >= n - 1)
-//        {
-//            result = m_b;
-//            r_b = m_b - 1;
-//        }
-//        else {
-//            l_b = m_b + 1;
-//        }
-//    }
-
-//    if(n == 1)
-//        std::cout << std::min(x,y);
-//    else {
-//        std::cout << result + std::min(x,y);
-//    }
-
-//    return 0;
-//}
-
 bool is_ok(long long num, unsigned short x, unsigned short y, long long mid)
 {
     long long cur_num_cpy = (mid / x) + (mid / y);
