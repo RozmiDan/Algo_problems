@@ -16,7 +16,7 @@ long long binary_search(size_t width, size_t len, size_t num)
 {
     long long val_of_X = 0;
     long long left_bound = 0;
-    long long right_bound = (num * std::min(len, width));
+    long long right_bound = 1e18;
 
     while(left_bound <= right_bound)
     {
