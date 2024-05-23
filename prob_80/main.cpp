@@ -4,18 +4,12 @@
 using namespace std;
 
 int removeDuplicates(vector<int>& nums) {
-    int l_ptr = 0, counter = 0;
-
-    for (int r_ptr = 0; r_ptr < nums.size(); ++r_ptr) {
-
-        if(nums[r_ptr] == nums[l_ptr] && counter <= 2){
-            l_ptr = r_ptr;
-            counter++;}
-
-        else if(nums[r_ptr] == nums[l_ptr] && counter > 2) {
-
-        }
+    int l_ptr = 1;
+    for (int r_ptr = 1; r_ptr < nums.size(); ++r_ptr) {
+        if(l_ptr == 1 || nums[r_ptr] != nums[r_ptr - 2])
+            nums[l_ptr++] = nums[r_ptr];
     }
+    return l_ptr;
 }
 
 int main()
