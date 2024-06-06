@@ -29,10 +29,10 @@ TreeNode* build_tree(int fst_ptr, int scnd_ptr, vector<int>& vals)
         return 0;
 
     int mid = (fst_ptr + scnd_ptr) / 2;
-    TreeNode node (vals[mid]);
-    node.left = build_tree(fst_ptr, mid-1, vals);
-    node.right = build_tree(mid+1, scnd_ptr, vals);
-    return &node;
+    TreeNode* node = new TreeNode(vals[mid]);
+    node->left = build_tree(fst_ptr, mid-1, vals);
+    node->right = build_tree(mid+1, scnd_ptr, vals);
+    return node;
 }
 
 TreeNode* balanceBST(TreeNode* root) {
